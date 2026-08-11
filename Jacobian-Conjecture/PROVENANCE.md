@@ -86,12 +86,25 @@ The current ChatGPT audit added or made explicit several connections that were n
 
 These 2026-08-11 observations must not be back-attributed to the original BLIND sessions absent evidence already contained in the surviving corpus.
 
+## 2026-08-11 public-source acquisition provenance
+
+A Codex Luna courier operating from the owner's Mac acquired the following without performing mathematical analysis:
+
+- untouched arXiv `2608.02863` source bundle, SHA-256 `3f31ed51b3589cc41ba51aa140632fcaff74da92fa85442492d96069583994ce`;
+- exact Zenodo API metadata and the sole attached file for DOI `10.5281/zenodo.21514514`;
+- untouched arXiv `2607.20210` source bundle, SHA-256 `abf541b7e211d5ef0b14145ddb303f0cc34cb959fa7bec17f9efac1f6e3eadc9`.
+
+The Kistner–Shaska arXiv bundle does not contain the cited `balanced_minimal_models_companion.pdf`. Bounded checks found no arXiv ancillary-download entry, the canonical ancillary candidate returned HTTP 404, and no retained local copy was found. Its status is therefore **NOT PUBLICLY LOCATED** as of this checkpoint.
+
+This negative result must be represented correctly: it prevents complete comparison against the cited companion, but it is not evidence that the companion contains no overlapping result.
+
 ## Priority caveats
 
 Novelty and priority are separate from correctness. Before any public priority claim:
 
-- inspect the Kistner–Shaska ancillary companion preprint `balanced_minimal_models_companion.pdf`;
-- compare recent non-indexed notes and ancillary materials;
+- compare the acquired `2607.20210` and `2608.02863` source texts theorem-by-theorem against the boundary-ring, filtration, degree-17, and jet results;
+- carry the unavailable Kistner–Shaska companion as an explicit literature-coverage limitation unless an authentic copy later becomes available;
+- compare other genuinely relevant recent/non-indexed notes where evidence warrants it;
 - obtain independent specialist review.
 
 Do not condition priority assessment on recovering additional raw BLIND histories; the owner has confirmed no further such material is available.
