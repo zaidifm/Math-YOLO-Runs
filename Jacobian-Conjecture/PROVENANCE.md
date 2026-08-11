@@ -72,9 +72,9 @@ A raw BLIND 4 platform transcript is not available; the supplied findings packag
 
 Reverse-engineering experiment. It was supplied the explicit counterexample and asked to derive mechanism and consequences. It should not be treated as an independent discovery run.
 
-## 2026-08-11 synthesis in this repository
+## Earlier 2026-08-11 synthesis
 
-The current ChatGPT audit added or made explicit several connections that were not cleanly stated in the archived blind reports:
+The initial ChatGPT audit added or made explicit several connections that were not cleanly stated in the archived blind reports:
 
 1. recognition of `cW=b(b-1)` as a Danielewski surface;
 2. interpretation of the hidden affine plane as the complement of one boundary component;
@@ -84,7 +84,94 @@ The current ChatGPT audit added or made explicit several connections that were n
 5. interpretation of hidden `a`-degree as the induced LND filtration;
 6. associated-graded leading relation `cW=b^2` and the `+1` shift as the smoothing/splitting of the double-root boundary cone.
 
-These 2026-08-11 observations must not be back-attributed to the original BLIND sessions absent evidence already contained in the surviving corpus.
+These observations must not be back-attributed to the original BLIND sessions absent evidence already contained in the surviving corpus.
+
+## 2026-08-11 blackboard synthesis — SL2 quotient and canonical classification
+
+A later blackboard pass in the same ChatGPT thread, explicitly undertaken after the owner asked to stop relying on literature search and attack the structure algebraically, produced a stronger reorganization. These results are **current-run synthesis**, not BLIND-session results.
+
+### Exact identities and computed structure
+
+The audit introduced
+
+- `v=1+2xy`;
+- `L=-1+3xy+x^2z`;
+- the existing `K=y+6xy^2+xz+2x^2yz`;
+
+and observed/checked the exact Bezout identity
+
+`xK-vL=1`.
+
+This yields the source matrix
+
+`G=[[x,v],[L,K]] in SL_2`,
+
+with an exact elementary matrix factorization. The earlier boundary generators are its torus-invariant matrix products:
+
+- `W=xL`;
+- `b=xK`;
+- `b-1=vL`;
+- `c=vK`.
+
+Consequently the BLIND 2 boundary surface is reinterpreted as the affine torus quotient of `SL_2`, and on the big cell the relation `b=1+aW` is exactly the determinant-one exchange relation after torus normalization.
+
+After setting `q=2b-1`, the boundary equation becomes `q^2-4cW=1`, a discriminant-one affine quadric. The previously isolated hidden LND extends to a full `sl_2` triple. These identities and commutators are **COMPUTED** exactly by the new verifier.
+
+### Strengthened intersection proof
+
+The new identity also gives
+
+`(W,b)k[x,y,z]=(xL,xK)=x(L,K)=(x)`
+
+because `xK-vL=1` forces `(L,K)=(1)`.
+
+This identifies the missing boundary divisor's pullback scheme-theoretically, with multiplicity one, and sharpens the earlier valuation/normality argument for
+
+`k[a,W] ∩ k[x,y,z]=R`.
+
+The general divisorial argument is **DERIVED** in this run and is not yet externally/formally reviewed.
+
+### Associated graded and degree filtration
+
+The same pass computed the top forms of `(W,b,c)` and identified
+
+`gr R = k[Wbar,bbar,cbar]/(cbar Wbar-bbar^2)`
+
+with the second-Veronese/sign-invariant ring `k[s^2,st,t^2]`. With source weights `deg(s)=2`, `deg(t)=3`, hidden `a`-degree becomes the exponent of `t`. This makes the old parity formula
+
+`delta_R(m)=3m` for even `m`, `3m+2` for odd `m`
+
+a direct consequence of the sign-invariance parity constraint.
+
+### Complete fixed-chart canonical-potential classification
+
+A diagonal decomposition of `g in k[a,W]`, combined with the boundary valuation, yielded the current-run theorem candidate:
+
+`h = h0 + alpha*a + beta + r`, with `r in I_D=(W,b) subset R`,
+
+for the fixed reciprocal-chart canonical-potential construction. The `alpha*a` and `beta` terms are target translations, so modulo translations the polynomializable deformation space is the boundary ideal itself.
+
+This statement is **DERIVED**, not yet independently verified. It strictly generalizes the BLIND 4 one-variable/two-jet slice; that criterion becomes the `d=2` boundary-divisibility case.
+
+### Sharp spectrum and bounded validation
+
+The classification gives the all-hidden-degree candidate spectrum
+
+- `mu(m)=3m+2` for odd `m`;
+- `mu(m)=3m+4` for even `m`;
+
+with unique minimal representatives `bc^r` for odd degree and `b^2c^{r-1}` for even degree. In particular the old degree-17 direction is `bc^2=a^2(1+aW)^3`.
+
+An independent exact reconstruction of the original coefficient-constraint matrices matched the classification's predicted cumulative nullity for every degree bound `D=3,...,20` (18/18 bounds). This finite agreement is **COMPUTED** evidence for, not a substitute for, the general classification proof.
+
+Artifacts:
+
+- `docs/SL2_BOUNDARY_CLASSIFICATION_2026-08-11.md`;
+- `scripts/jacobian_blackboard_quadric_verify.py`;
+- `verification/jacobian_blackboard_quadric_verify_2026-08-11.txt`;
+- `verification/Jacobian_Canonical_Kernel_Exact_Validation_2026-08-11.txt`.
+
+None of these current-run observations should be back-attributed to BLIND 2 or BLIND 4 merely because they unify structures first seen there.
 
 ## 2026-08-11 public-source acquisition provenance
 
@@ -102,7 +189,8 @@ This negative result must be represented correctly: it prevents complete compari
 
 Novelty and priority are separate from correctness. Before any public priority claim:
 
-- compare the acquired `2607.20210` and `2608.02863` source texts theorem-by-theorem against the boundary-ring, filtration, degree-17, and jet results;
+- independently check the current-run `SL_2/T`, intersection, classification, spectrum, and Hilbert-series arguments;
+- compare the acquired `2607.20210` and `2608.02863` source texts theorem-by-theorem against the strengthened formulation;
 - carry the unavailable Kistner–Shaska companion as an explicit literature-coverage limitation unless an authentic copy later becomes available;
 - compare other genuinely relevant recent/non-indexed notes where evidence warrants it;
 - obtain independent specialist review.
