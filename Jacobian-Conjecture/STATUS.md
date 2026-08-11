@@ -1,89 +1,62 @@
 # STATUS — Jacobian Conjecture Research
 
-**Checkpoint:** 2026-08-11
+**Checkpoint:** 2026-08-11 blackboard frontier
 
-## Current frontier
-
-The 2026-08-11 blackboard pass reorganized the earlier boundary-ring, LND, jet, and degree-17 observations around one exact source object.
+## 1. Hidden source geometry
 
 Set
 
 \[
-v=1+2xy,\qquad
-L=-1+3xy+x^2z,\qquad
-K=y+6xy^2+xz+2x^2yz.
+v=1+2xy,\qquad L=-1+3xy+x^2z,\qquad K=y+6xy^2+xz+2x^2yz.
 \]
 
-Then
+Exact symbolic algebra gives
 
 \[
 \boxed{xK-vL=1},
 \]
 
-so
+hence
 
 \[
 \boxed{G=\begin{pmatrix}x&v\\L&K\end{pmatrix}\in SL_2.}
 \]
 
-The determinant identity and the exact elementary factorization of `G` are **COMPUTED**.
-
-### Boundary ring = torus quotient
-
-Under row rescaling by the diagonal torus, the invariant matrix products are
+With torus row scaling, the invariant matrix products are
 
 \[
 W=xL,\qquad b=xK,\qquad b-1=vL,\qquad c=vK.
 \]
 
-Hence
+Therefore the BLIND 2 boundary ring is the affine torus quotient
 
 \[
-\boxed{R\cong k[W,b,c]/(cW-b(b-1))}
+\boxed{R=k[W,b,c]/(cW-b(b-1)).}
 \]
 
-is the affine torus quotient of the displayed `SL_2` model. On `x!=0`, torus normalization gives
+On the quotient big cell, torus normalization gives
 
 \[
-\begin{pmatrix}1&a\\W&b\end{pmatrix},
-\qquad a=v/x,
+\begin{pmatrix}1&a\\W&b\end{pmatrix}
 \]
 
-so determinant one forces the old shifted relation
+and determinant one forces
 
 \[
 \boxed{b=1+aW}.
 \]
 
-The hidden `(a,W)` plane is the quotient big cell. The shift is structural, not accidental.
-
-### Discriminant-one quadric and full `sl_2`
-
 With `q=2b-1`,
 
 \[
-\boxed{q^2-4cW=1}.
+\boxed{q^2-4cW=1},
 \]
 
-The earlier hidden derivative is one root operator in the exact `sl_2` triple
+and the earlier hidden LND extends to a full exact `sl_2` triple.
 
-\[
-e(W)=0,\ e(q)=2W,\ e(c)=q,
-\]
+**Status:** matrix identities, factorization, quotient invariants, quadric equation, and `sl_2` commutators are **COMPUTED** exactly.
 
-\[
-f(W)=q,\ f(q)=2c,\ f(c)=0,
-\]
-
-with `h=[e,f]` and
-
-\[
-[e,f]=h,\qquad [h,e]=2e,\qquad [h,f]=-2f.
-\]
-
-These identities and commutators are **COMPUTED** exactly.
-
-### Strengthened intersection theorem
+## 2. Strengthened intersection theorem
 
 The archived BLIND 2 theorem is
 
@@ -91,7 +64,7 @@ The archived BLIND 2 theorem is
 \boxed{k[a,W]\cap k[x,y,z]=R.}
 \]
 
-The new determinant identity gives the exact ideal pullback
+The new determinant identity gives
 
 \[
 (W,b)k[x,y,z]=(xL,xK)=x(L,K)=(x),
@@ -99,25 +72,19 @@ The new determinant identity gives the exact ideal pullback
 
 because `xK-vL=1` implies `(L,K)=(1)`.
 
-Thus the missing boundary divisor pulls back scheme-theoretically to `x=0` with multiplicity one. Combined with the quotient big cell and normality of the smooth quadric, this gives a direct divisorial proof of the intersection equality.
+Thus the missing boundary divisor pulls back scheme-theoretically to `x=0` with multiplicity one. Together with the quotient big cell and normality of the smooth quadric, this gives a direct divisorial proof of the intersection equality.
 
-**Status:** supporting identities **COMPUTED**; general divisorial proof **DERIVED**, internally stress-tested, not yet independently specialist/formally reviewed.
+**Status:** exact ideal identity **COMPUTED**; general divisorial theorem **DERIVED**, internally stress-tested, awaiting independent specialist/formal review.
 
-### Associated graded = second Veronese / `A_1` cone
+## 3. Associated graded and degree law
 
-The source total degrees are
-
-\[
-\deg W=4,\qquad \deg b=5,\qquad \deg c=6,
-\]
-
-with top forms
+The source degrees are
 
 \[
-x^3z,\qquad 2x^3yz,\qquad 4x^3y^2z.
+\deg W=4,\qquad\deg b=5,\qquad\deg c=6,
 \]
 
-Therefore
+and
 
 \[
 \boxed{\operatorname{gr}R\cong
@@ -125,28 +92,22 @@ k[\bar W,\bar b,\bar c]/(\bar c\bar W-\bar b^2)
 \cong k[s^2,st,t^2].}
 \]
 
-Use `deg(s)=2`, `deg(t)=3`; hidden `a`-degree is the exponent of `t`. The old ring-filtration law
+Thus the total-degree degeneration is the second Veronese / `A_1` cone. With `deg(s)=2`, `deg(t)=3`, hidden `a`-degree is the exponent of `t`, and
 
 \[
 \boxed{\delta_R(m)=
-\begin{cases}3m,&m\text{ even},\\3m+2,&m\text{ odd}
+\begin{cases}3m,&m\text{ even},\\3m+2,&m\text{ odd}.
 \end{cases}}
 \]
 
-is exactly the parity condition of the second Veronese. A compatible weighted Rees form is
+The old parity defect is the sign-invariance constraint.
+
+## 4. Complete fixed-chart canonical-potential classification
+
+For
 
 \[
-Q^2-4CW=T^{10},
-\]
-
-which degenerates the smooth discriminant-one quadric to the `A_1` cone.
-
-### Complete fixed-chart canonical-potential classification
-
-For the base potential
-
-\[
-h_0=a^2+Wa^3=a^2(1+aW),
+h_0=a^2(1+aW),
 \]
 
 write `h=h0+g`. Polynomial outputs require
@@ -155,36 +116,17 @@ write `h=h0+g`. Polynomial outputs require
 g_a\in R,\qquad ag_a-g\in R.
 \]
 
-A complete diagonal analysis in `a^iW^j`, using the boundary valuation, gives
+Diagonal decomposition plus the boundary valuation gives
 
 \[
-\boxed{h=h_0+\alpha a+\beta+r,
-\qquad r\in I_D=(W,b)\subset R.}
+\boxed{h=h_0+\alpha a+\beta+r,\qquad r\in I_D=(W,b)\subset R.}
 \]
 
-The `\alpha a` and `\beta` terms are target translations. Modulo translations, the polynomializable deformation space is exactly the ideal of the missing boundary line.
+The `alpha*a` and `beta` terms are target translations. Modulo translations, the whole polynomializable deformation space is the ideal of the missing boundary line.
 
-This **DERIVED** statement strictly generalizes the BLIND 4 slice. The old two-jet condition
+This strictly generalizes BLIND 4's two-jet slice.
 
-\[
-H(t)=1+t+(1+t)^3R(t)
-\]
-
-is the `d=2` boundary-divisibility case.
-
-### Sharp degree spectra and degree 17
-
-For hidden degree `m`, the boundary ideal becomes `(s^2,st)` in the associated graded model. Minimizing the degree of the **pulled-back potential representative** gives
-
-\[
-\boxed{\mu_{\mathrm{pot}}(m)=
-\begin{cases}
-3m+2,&m\text{ odd},\\
-3m+4,&m\text{ even},
-\end{cases}\qquad m\ge1.}
-\]
-
-Unique minimal representatives are
+The unique minimal direction at hidden degree `m` is
 
 \[
 g_{2r+1}=bc^r=a^r(1+aW)^{r+1},
@@ -194,85 +136,194 @@ g_{2r+1}=bc^r=a^r(1+aW)^{r+1},
 g_{2r}=b^2c^{r-1}=a^{r-1}(1+aW)^{r+1}.
 \]
 
-In particular,
+For `m>=2`, its sharp output-degree threshold is
 
 \[
-\boxed{g_5=bc^2=a^2(1+aW)^3,\qquad \mu_{\mathrm{pot}}(5)=17.}
+\boxed{D_m=
+\begin{cases}3m+2,&m\text{ odd},\\3m+4,&m\text{ even}.
+\end{cases}}
 \]
 
-The coefficient pattern `(1,3,3,1)` is the binomial expansion of the unique minimal boundary-ideal weight vector.
-
-The potential degree and induced output-change degree agree for every `m>=2`. There is one low-degree cancellation exception:
+In particular
 
 \[
-g_1=b,\qquad \deg(g_1\text{ after pullback})=5,
+\boxed{g_5=bc^2=a^2(1+aW)^3,\qquad D_5=17.}
 \]
 
-but
+The old `(1,3,3,1)` vector is the binomial expansion of this unique minimal boundary-ideal vector.
+
+An exact reconstruction of the original coefficient matrices matched the classification at every degree bound `D=3,...,20`.
+
+## 5. BLIND 4 and boundary `SL_2` are the same source family
+
+Define
 
 \[
-g_{1,a}=W,\qquad ag_{1,a}-g_1=-1,
+J_t=\begin{pmatrix}1&x\\ty&1+txy\end{pmatrix}\in SL_2.
 \]
 
-so its output change has degree 4. Thus if `\nu(m)` is the sharp output-change degree,
+The BLIND 4 binary-cubic root frame is exactly `J_1^{-1}`.
+
+If `p=3y+xz`, `n_-(p)=[[1,0],[p,1]]`, and `w=[[0,1],[-1,0]]`, then the boundary matrix satisfies
 
 \[
-\boxed{\nu(1)=4,\qquad \nu(m)=\mu_{\mathrm{pot}}(m)\quad(m\ge2).}
+\boxed{G=n_-(p)J_2^{-1}w.}
 \]
 
-This correction does not affect the degree-17 theorem or any threshold used for hidden degree at least two.
+Thus the normalized-gradient and boundary-quotient pictures are adjacent members of the same elementary `SL_2` source geometry, not unrelated appearances of the group.
 
-A second refinement is
+The exact binary-cubic coefficient expansion and normalized gradient are independently checked in `scripts/jacobian_blind4_sl2_bridge_verify.py`.
+
+## 6. Quintic scalar line: exact surjectivity classification
+
+Consider
 
 \[
-\delta_R(4)=12\quad\text{but}\quad \mu_{\mathrm{pot}}(4)=16,
+h_{5,\lambda}=h_0+\lambda a^2(1+aW)^3.
 \]
 
-because `c^2` is ring-minimal but not an admissible canonical-potential deformation; the minimal admissible direction is `b^2c`.
+For `lambda!=0`, the resulting map has
 
-### Closed bounded kernel
+\[
+\det J=1,\qquad(\deg S,\deg U,\deg W)=(17,16,4),
+\]
 
-Modulo the two translation gauges, the predicted output-degree basis is
+and generic fiber degree five.
 
-- `W^j`, `j>=1`: degree `4j`;
-- `bW^j`, `j>=0`: degree `4j+4`;
-- `b^sW^j`, `s>=2,j>=0`: degree `5s+4j`;
-- `b^sc^r`, `s>=1,r>=1`: degree `5s+6r`.
+For target `w!=0`, setting `t=wa` gives the recovery quintic
+
+\[
+P_\lambda(t)=
+\lambda t^5+3\lambda t^4+(1+3\lambda)t^3+(1+\lambda)t^2-uwt+2sw^2.
+\]
+
+A target is missed iff every recovery root is multiple. Exact squareful elimination gives
+
+\[
+\boxed{27\lambda^2+99\lambda+5=0}
+\]
+
+as the complete nonzero exceptional condition.
 
 Hence
 
 \[
-\boxed{H(q)=2+\frac{2q^4}{1-q^4}
-+\frac{q^{10}}{(1-q^4)(1-q^5)}
-+\frac{q^{11}}{(1-q^5)(1-q^6)}.}
+\boxed{\lambda_\pm=\frac{-33\pm7\sqrt{21}}{18}}
 \]
 
-An exact SymPy reconstruction of the original coefficient-constraint matrices matched the predicted cumulative nullity for **all 18 bounds `D=3,...,20`**. At `D=16` the nullity is 15; at `D=17` it is 16, with exactly one new direction, `bc^2`.
+are the only two bad nonzero coefficients. Constructive omitted targets are recorded for both.
 
-## Durable artifacts
+Every other nonzero `lambda` gives a **surjective, noninjective** degree-`(17,16,4)` Keller map of generic fiber degree five.
+
+At `lambda=0`, the recovery degree drops to three and an explicit omitted curve is recovered.
+
+## 7. All minimal directions: surjectivity for every m >= 6
+
+For the unique minimal direction write
+
+\[
+g_m=a^d(1+aW)^e,\qquad d+e=m,
+\]
+
+with `e-d=1` for odd `m` and `e-d=2` for even `m`.
+
+For every `lambda!=0`, these directions polynomialize directly and the canonical Jacobian identity gives
+
+\[
+\boxed{\det JF_{m,\lambda}=1.}
+\]
+
+For target `w!=0`, every recovery polynomial normalizes to
+
+\[
+\boxed{P(t)=t^d(1+t)^e+\kappa t^2(1+t)+pt+q,\qquad\kappa\ne0.}
+\]
+
+For `m>=9`, two independent blackboard proofs exclude a squareful `P`:
+
+1. a logarithmic-derivative pole-count argument;
+2. a Newton-identity/Vandermonde moment argument.
+
+The low cases `m=6,7,8` are closed by exact coefficient classifications.
+
+Therefore
+
+\[
+\boxed{
+\text{for every }m\ge6\text{ and every }\lambda\in\mathbb C^\times,
+F_{m,\lambda}\text{ is surjective.}
+}
+\]
+
+For generic targets it has `m` simple recovery roots, so
+
+\[
+\boxed{\deg_{gen}F_{m,\lambda}=m.}
+\]
+
+These are surjective, noninjective Keller maps with degree profile
+
+\[
+\boxed{(D_m,D_m-1,4)}.
+\]
+
+## 8. Complete nonzero-scalar phase diagram
+
+Exact low-degree factorizations close the remaining cases:
+
+\[
+\boxed{
+\begin{array}{c|c}
+\text{hidden/generic degree}&\text{surjectivity for }\lambda\ne0\\
+\hline
+m=3&\text{never}\\
+m=4&\text{never}\\
+m=5&\text{except at two algebraic }\lambda\\
+m\ge6&\text{always}
+\end{array}}
+\]
+
+Degree five is the bifurcation layer. The squareful recovery stratum meets its scalar line at exactly two nonzero coefficients; at degree six that intersection disappears and never returns.
+
+## 9. Internal comparison with BLIND 1
+
+BLIND 1 had already produced a different surjective noninjective family for every generic degree `m>=6`, with degree profile
+
+\[
+(5m,5m-1,4).
+\]
+
+Its `m=5` member was nonsurjective and the report explicitly left open whether another generic-degree-five deformation could be surjective.
+
+The current result sharpens that surviving project record:
+
+- minimal directions reduce the profile to `(D_m,D_m-1,4)` with `D_m<5m` for every `m>=6`;
+- the boundary filtration explains why these are degree-minimal inside the fixed canonical chart;
+- and the quintic scalar classification resolves the retained project's degree-five question positively.
+
+This is an internal project-provenance comparison, not an external literature-priority claim.
+
+## 10. Durable artifacts
+
+Core structural notes:
 
 - `docs/SL2_BOUNDARY_CLASSIFICATION_2026-08-11.md`
-- `scripts/jacobian_blackboard_quadric_verify.py`
-- `verification/jacobian_blackboard_quadric_verify_2026-08-11.txt`
-- `verification/Jacobian_Canonical_Kernel_Exact_Validation_2026-08-11.txt`
+- `docs/SL2_FRAME_BRIDGE_2026-08-11.md`
+- `docs/QUINTIC_LAMBDA_SURJECTIVITY_2026-08-11.md`
+- `docs/MINIMAL_DIRECTION_SURJECTIVITY_2026-08-11.md`
+- `docs/MINIMAL_DIRECTION_SURJECTIVITY_SECOND_PROOF_2026-08-11.md`
+- `docs/MINIMAL_SCALAR_SURJECTIVITY_PHASE_2026-08-11.md`
 
-The verifier checks the determinant/exchange identity, matrix factorization, quotient big cell, discriminant-one equation, `sl_2` commutators, leading forms, and minimal representatives through hidden degree 12.
+Exact scripts and outputs are under `scripts/` and `verification/` with matching names.
 
-## Public-source state
+## 11. Epistemic / priority state
 
-The source-level public corpus is acquired and hash-pinned. The cited Kistner–Shaska `balanced_minimal_models_companion.pdf` is absent from the deposited arXiv bundle and was **NOT PUBLICLY LOCATED** by bounded acquisition checks. This is a literature-coverage caveat, not evidence of non-overlap.
+No external novelty or priority claim is made.
 
-## Epistemic / priority state
+The main exact identities, low-degree factorization/elimination certificates, bounded-kernel calculations, and concrete witness formulas are **COMPUTED**.
 
-No novelty or priority claim is made for the `SL_2/T`, quadric, classification, spectrum, or Hilbert-series synthesis.
+The general quotient/intersection/classification theorems and all-degree surjectivity argument are **DERIVED**, with several independent internal routes, but still require external algebraic-geometry/formal review before promotion to publication-level VERIFIED status.
 
-Exact symbolic identities and finite matrix comparisons are **COMPUTED**. The general intersection/classification/spectrum arguments are **DERIVED** and require an independent second route plus specialist/formal review.
+The unavailable Kistner-Shaska `balanced_minimal_models_companion.pdf` remains a literature-coverage caveat.
 
-## Remaining blocking obligations
-
-1. Independently rederive or formally check the general intersection/classification argument, preferably by a route orthogonal to SymPy.
-2. Obtain external algebraic-geometry review of the quotient/divisor argument.
-3. Compare the acquired public source texts theorem-by-theorem against this strengthened formulation, carrying the unavailable companion as an explicit limitation.
-4. Only then decide whether a publication-quality note and any novelty language are supportable.
-
-Additional raw BLIND provenance is **not** an open obligation.
+Additional raw BLIND provenance is **not** an open acquisition task.
