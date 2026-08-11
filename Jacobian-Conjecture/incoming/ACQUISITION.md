@@ -2,6 +2,12 @@
 
 This directory documents artifacts needed to close the current correctness/novelty audit. Do not commit credentials, cookies, browser profiles, or unrelated private exports.
 
+## Provenance corpus is closed
+
+The owner has confirmed that the Jacobian archives already supplied contain **all BLIND-session conversational history that still exists or is available to provide**. Do not ask Codex/Luna or any acquisition agent to search for additional raw BLIND 1/3/4/5 conversations or the sibling message that suggested `k[a,W] ∩ k[x,y,z]`. Treat the existing raw BLIND 2 conversation, raw verification conversation, BLIND 1–5 findings packages, retrospective histories, scripts, and audit artifacts as the complete available provenance corpus.
+
+This is an evidence limitation to record, not an acquisition task.
+
 ## P0 — Kistner–Shaska ancillary package
 
 Acquire the original arXiv source/ancillary bundle for:
@@ -34,33 +40,7 @@ Also inventory every ancillary script/certificate/log in the submission.
 
 Record exact theorem/lemma/page references rather than only semantic similarity.
 
-## P1 — raw BLIND provenance recovery
-
-Search the owner's local ChatGPT exports for original raw conversation graphs corresponding to:
-
-- BLIND 1;
-- both historically labeled BLIND 3 packages if distinct;
-- BLIND 4;
-- BLIND 5;
-- the sibling conversation/message that explicitly proposed `k[a,W] ∩ k[x,y,z]` to BLIND 2.
-
-Useful search anchors:
-
-- `1 + aW = xK`
-- `k[a,W]`
-- `boundary ring`
-- `degree 17`
-- `normalized gradient`
-- `binary cubic`
-- `finite jet`
-- `H(-1)` / `H'(-1)` / `H''(-1)`
-- `fundamental blind spot and weakness`
-
-If raw records are found, preserve original conversation IDs, title, timestamps, message graph, tool outputs, model metadata, and attachments. Do **not** commit the raw private exports directly to this public repository. Instead create a scrubbed provenance receipt with hashes and precise local/private-storage locators.
-
-If a raw record is not found, record `NOT FOUND` and locations searched. Do not fabricate a reconstructed transcript.
-
-## P2 — independent CAS audit
+## P1 — independent CAS audit
 
 Deferred until the repository acquisition/provenance layer is settled.
 
