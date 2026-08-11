@@ -1,0 +1,7 @@
+m=6 square-cubic obstruction: VERIFIED (forces k=0)
+m=6 cube-quadratic obstruction: VERIFIED
+m=7 A2^2 B1^3 obstruction: VERIFIED; resultant=24869376
+m=8 square-quartic obstruction: VERIFIED
+m=8 A1^2 B2^3 obstruction: VERIFIED (forces k=0)
+minimal direction exponent/degree formulas m=5..20: VERIFIED
+Together with the logarithmic-derivative proof, this covers all m>=6.
