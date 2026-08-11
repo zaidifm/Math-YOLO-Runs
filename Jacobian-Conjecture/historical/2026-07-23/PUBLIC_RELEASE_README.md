@@ -1,32 +1,39 @@
 # Jacobian historical public release — 2026-07-23
 
-This directory publishes the Jacobian-Conjecture YOLO research material that is relevant to the mathematical experiment and safe for public release.
+Publication review completed 2026-08-11.
 
-## Included
+## Decision
 
-- `Jacobian_Full_Research_Archive_2026-07-23.zip` — the original consolidated research archive, byte-for-byte unchanged from the retained evidence copy.
-- `BLIND2_VISIBLE_TRANSCRIPT.md` — the visible user/assistant transcript of the raw BLIND 2 conversation.
-- `VERIFICATION_VISIBLE_TRANSCRIPT.md` — the visible user/assistant transcript of the later verification conversation.
-- `boundary_ring_coordinate_diagram.png` — generated mathematical diagram from BLIND 2.
-- `boundary_ring_degree_semigroup.png` — generated mathematical diagram from BLIND 2.
+The mathematical contents of the retained Jacobian archives contain **no unrelated personal-life material** found in the review. The owner's supplied attribution `S. Ali Zaidi` / `ali@zaidi.fm` is intentionally public.
 
-## Intentionally omitted
+The following artifacts are **approved for public mirroring**:
 
-The original raw backend `conversation.json` exports are not published here. They contain backend-only metadata and hidden reasoning-related fields that are not needed to reproduce or assess the mathematical experiment. Their omission is not a redaction of visible mathematical dialogue: the public Markdown transcripts preserve the visible prompts and answers.
+- `Jacobian_Full_Research_Archive_2026-07-23.zip`, byte-for-byte unchanged from the retained evidence copy.
+- The visible Markdown transcript of BLIND 2.
+- The visible Markdown transcript of the later verification conversation.
+- BLIND-generated mathematical code, reports, logs, certificates, and diagrams.
 
-Two user-uploaded screenshots from the BLIND 2 conversation are also omitted from this release because they are not needed to verify the boundary-ring mathematics. They contain no unrelated private-life material according to the publication review.
+The following are **not part of the public release**:
 
-## Privacy review
+- raw backend `conversation.json` exports, because they contain backend-only metadata and hidden reasoning-related fields that are not needed to reproduce or assess the mathematical experiment;
+- authentication material, if any is ever encountered;
+- anything unrelated to the Jacobian/YOLO mathematics experiment.
 
-A recursive scan of both retained Jacobian archives found no unrelated personal-life discussions involving the owner's family, relationships, health, politics, finances, or other non-mathematical private matters. The public research archive contains the deliberately supplied attribution `S. Ali Zaidi` / `ali@zaidi.fm`; that contact address is intentionally public.
+The two user-uploaded screenshots in BLIND 2 were inspected and contain no unrelated personal material, but they are not necessary for the mathematical release.
 
-No API keys, passwords, bearer tokens, private keys, Social Security numbers, or authentication cookies were found in the publication set.
+## Privacy/security review
+
+A recursive scan of the retained archives found no discussion of unrelated family, relationship, health, political, financial, or other private-life matters. Targeted searches included known personal names/topics as well as generic credential and sensitive-identifier patterns.
+
+No API keys, passwords, bearer tokens, authentication cookies, private keys, or Social Security numbers were found in the approved publication set.
+
+The larger raw YOLO export does contain ChatGPT backend metadata such as conversation/message/account identifiers. Those identifiers are not treated as sensitive under the owner's publication criteria, but the raw JSON is still excluded because the backend-only reasoning and machinery add no scientific value.
 
 ## Provenance warning
 
-Most BLIND 1/3/4/5 supplementary histories are retrospective reconstructions rather than raw platform transcripts. Raw platform provenance is strongest for BLIND 2 and the later verification conversation. See `../../PROVENANCE.md` and `../../docs/Jacobian_YOLO_Process_Review.md` for the current attribution/status audit.
+Most BLIND 1/3/4/5 supplementary histories are retrospective reconstructions rather than raw platform transcripts. Raw platform provenance is strongest for BLIND 2 and the later verification conversation. See `../../PROVENANCE.md` and `../../docs/Jacobian_YOLO_Process_Review.md`.
 
-## SHA-256
+## Approved-artifact SHA-256 values
 
 ```text
 19eb2d7b5f4eaaf460428709caff68c4dff3803bb27b3ae7287c1b2cb67a60b6  Jacobian_Full_Research_Archive_2026-07-23.zip
@@ -35,3 +42,7 @@ Most BLIND 1/3/4/5 supplementary histories are retrospective reconstructions rat
 b11b5272578c822d09b2fa33dcb2db62223bbd7f34f9767efb32ff7915966149  boundary_ring_coordinate_diagram.png
 665bdb2640a63ea16870136347bcdf2566873ae138f1a5e5ac25d845b522b11b  boundary_ring_degree_semigroup.png
 ```
+
+## Repository-transfer status
+
+The GitHub connector used for this review can write repository text directly but does not accept container-local binary/attachment paths as upload inputs. The approved large/binary artifacts and exact full transcripts therefore remain **approved and hash-pinned for the next raw-git/Codex push**, rather than being reconstructed through lossy copy/paste. This file is the authority for what that push may publish.
