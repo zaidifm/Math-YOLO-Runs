@@ -1,0 +1,34 @@
+Exact SymPy coefficient-matrix nullity versus blackboard classification
+2026-08-11
+
+D  exact_nullity  predicted_nullity
+3  2  2
+4  4  4
+5  4  4
+6  4  4
+7  4  4
+8  6  6
+9  6  6
+10 7  7
+11 8  8
+12 10 10
+13 10 10
+14 11 11
+15 12 12
+16 15 15
+17 16 16
+18 17 17
+19 18 18
+20 21 21
+
+All 18 tested bounds matched exactly.
+
+Classification basis by output degree:
+- gauges 1,a: degree 0
+- W^j (j>=1): 4j
+- b W^j (j>=0): 4j+4
+- b^s W^j (s>=2,j>=0): 5s+4j
+- b^s c^r (s>=1,r>=1): 5s+6r
+
+Hilbert series:
+H(q)=2 + 2 q^4/(1-q^4) + q^10/((1-q^4)(1-q^5)) + q^11/((1-q^5)(1-q^6)).
