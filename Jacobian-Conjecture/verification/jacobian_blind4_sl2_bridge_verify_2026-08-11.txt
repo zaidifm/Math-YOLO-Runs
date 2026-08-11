@@ -1,0 +1,7 @@
+det J1 = det J2 = 1: VERIFIED
+boundary G = n_-(p) J2^-1 w: VERIFIED
+L=xp-1 and K=vp-2y: VERIFIED
+beta=3(up-2y) and x alpha=beta-p: VERIFIED
+binary cubic expands to exact F1,F2,F3 coefficients: VERIFIED
+normalized gradient at (x,u) is 2(u,-x): VERIFIED
+F3=x(1-L): VERIFIED
