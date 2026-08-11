@@ -1,0 +1,4 @@
+m=4: for every k, an exact squareful quartic exists: VERIFIED
+  A=(3+k)/2, B=(3+k)(1-k)/8
+m=3: for every k!=-1, an exact triple-root cubic exists: VERIFIED
+Therefore every nonzero scalar m=3 and m=4 map is nonsurjective.
