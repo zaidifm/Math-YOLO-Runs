@@ -25,11 +25,12 @@ The following derivatives from that archive are approved:
 
 The original raw ZIP remains hash-pinned so future provenance disputes can be checked against the retained master without publishing backend-only data.
 
-## Known provenance limitations
+## Provenance boundary
 
 - Raw platform conversation exports are available for BLIND 2 and the later verification conversation.
 - Most BLIND 1/3/4/5 supplementary histories in the July research archive are retrospective reconstructions rather than complete raw platform transcripts.
-- A future acquisition run may still search the owner's local historical exports for raw BLIND 1, BLIND 3 variants, BLIND 4, BLIND 5, and the exact sibling message that proposed `k[a,W] ∩ k[x,y,z]`.
+- The owner has confirmed that **all available BLIND-session conversational history has already been supplied**. No additional raw BLIND 1/3/4/5 transcripts or sibling-source transcripts exist or are available to provide.
+- Future Codex/Luna acquisition agents must not be tasked with searching for additional raw BLIND provenance. The surviving archive is the complete available evidence corpus.
 
 ## Handling rule
 
