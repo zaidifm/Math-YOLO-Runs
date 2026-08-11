@@ -57,7 +57,7 @@ Hence the torus-invariant ring is
 
 This is the BLIND 2 boundary ring. Geometrically it is the affine left quotient `T\\backslash SL_2`, equivalently `SL_2/T` after inversion.
 
-On `x!=0`, use the torus to normalize `x=1`:
+On `x!=0`, use the torus to normalize the first entry:
 
 \[
 \operatorname{diag}(1/x,x)G=
@@ -188,14 +188,14 @@ The generic fiber is the smooth discriminant-one quadric; the special fiber is t
 
 with source weights `deg(s)=2`, `deg(t)=3`.
 
-Under `W=s^2`, `b=st`, `c=t^2`, hidden `a`-degree is the exponent of `t`. Thus the old law
+Under `W=s^2`, `b=st`, `c=t^2`, hidden `a`-degree is the exponent of `t`. Thus the ring law
 
 \[
 \delta_R(m)=
 \begin{cases}3m,&m\text{ even},\\3m+2,&m\text{ odd}\end{cases}
 \]
 
-is simply the parity constraint of the second Veronese: a sign-invariant monomial `s^r t^m` requires `r+m` even. The `+2` for odd `m` is forced by the smallest allowed `r=1`.
+is simply the parity constraint of the second Veronese.
 
 ## 5. Complete fixed-chart canonical-potential classification
 
@@ -223,29 +223,19 @@ The intersection theorem gives, for `d>=1`,
 a^dP_d(s)\in R\iff b^d\mid P_d(s).
 \]
 
-For `g_d=a^dP(s)`,
-
-\[
-\partial_a g_d=a^{d-1}(dP+sP'),
-\]
-
-\[
-(a\partial_a-1)g_d=a^d((d-1)P+sP').
-\]
-
-Solving the two divisibility conditions yields:
+For `g_d=a^dP(s)`, solving the regularity conditions for both `g_a` and `ag_a-g` yields:
 
 - nonpositive diagonals: arbitrary;
 - `d=1`: `P'(-1)=0`, equivalently `P=alpha+b^2Q`;
 - `d>=2`: `b^{d+1}|P`.
 
-These conditions collapse to one geometric statement:
+These conditions collapse to
 
 \[
 \boxed{g=\alpha a+r,\qquad r\in k+I_D,\qquad I_D=(W,b)\subset R.}
 \]
 
-Therefore the full fixed-chart potential classification is
+Therefore
 
 \[
 \boxed{
@@ -264,7 +254,7 @@ H(t)=1+t+(1+t)^3R(t)
 
 is precisely the `d=2` case, where the general theorem demands divisibility by `b^3`.
 
-## 6. Sharp deformation spectrum and degree 17
+## 6. Sharp potential-degree spectrum and the degree-17 direction
 
 In the second-Veronese degeneration, the boundary ideal becomes
 
@@ -272,10 +262,10 @@ In the second-Veronese degeneration, the boundary ideal becomes
 I_D=(s^2,st).
 \]
 
-For hidden degree `m`, minimize the source weight of an invariant monomial `s^r t^m` inside this ideal. The result is
+For hidden degree `m`, minimize the **pulled-back potential degree** of an invariant monomial `s^r t^m` inside this ideal. The result is
 
 \[
-\boxed{\mu(m)=
+\boxed{\mu_{\mathrm{pot}}(m)=
 \begin{cases}
 3m+2,&m\text{ odd},\\
 3m+4,&m\text{ even},
@@ -295,12 +285,30 @@ g_{2r}=b^2c^{r-1}=a^{r-1}(1+aW)^{r+1}.
 For hidden degree five,
 
 \[
-\boxed{g_5=bc^2=a^2(1+aW)^3,\qquad \mu(5)=17.}
+\boxed{g_5=bc^2=a^2(1+aW)^3,\qquad \mu_{\mathrm{pot}}(5)=17.}
 \]
 
-Thus the `(1,3,3,1)` coefficient pattern is the binomial expansion of the unique minimal boundary-ideal weight vector. The degree-17 phenomenon is a consequence of the torus quotient + Veronese parity + boundary-ideal condition.
+Thus the `(1,3,3,1)` coefficient pattern is the binomial expansion of the unique minimal boundary-ideal weight vector.
 
-A new refinement is that the ring bound `delta_R(4)=12` is not sharp for canonical potentials: `c^2` fails the boundary condition. The actual deformation threshold at hidden degree four is `mu(4)=16`, represented by `b^2c`.
+The old ring bound `delta_R(4)=12` is not sharp for canonical potentials: `c^2` fails the boundary condition. The minimal admissible hidden-degree-four potential is `b^2c`, of degree 16.
+
+### Potential degree versus output degree
+
+For every hidden degree `m>=2`, the minimal pulled-back potential degree above equals the minimal degree of the induced output change `(g_a,ag_a-g)`.
+
+There is one low-degree exception. For `m=1`, the minimal representative is `b`: its pullback has degree 5, but
+
+\[
+e(b)=W,\qquad (a\partial_a-1)b=-1,
+\]
+
+so the output change has degree 4. Thus, if `\nu(m)` denotes the sharp output-change degree,
+
+\[
+\boxed{\nu(1)=4,\qquad \nu(m)=\mu_{\mathrm{pot}}(m)\quad(m\ge2).}
+\]
+
+This correction does not affect the degree-17 result or any `m>=2` threshold.
 
 ## 7. Closed form for every bounded canonical kernel
 
@@ -325,6 +333,6 @@ An exact SymPy reconstruction of the original coefficient-constraint matrices wa
 
 ## 8. Epistemic boundary
 
-The identities, matrix factorization, `sl_2` commutators, top-degree forms, minimal representatives through hidden degree 12, and bounded matrix comparisons are COMPUTED exactly. The general intersection/potential/Hilbert arguments above are DERIVED and have been adversarially checked in this run, but still require independent specialist/formal review before promotion to VERIFIED.
+The identities, matrix factorization, `sl_2` commutators, top-degree forms, minimal representatives through hidden degree 12, and bounded matrix comparisons are **COMPUTED** exactly. The general intersection/potential/Hilbert arguments above are **DERIVED** and have been adversarially checked in this run, but still require independent specialist/formal review before promotion to VERIFIED.
 
 No novelty or priority claim is made. The unavailable Kistner-Shaska companion remains an explicit literature-coverage caveat.
