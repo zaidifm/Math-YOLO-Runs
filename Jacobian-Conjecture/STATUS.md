@@ -126,6 +126,18 @@ and preserves \(cW-b(b-1)\). The current audit identifies this as a locally nilp
 
 The BLIND 4 binary-cubic factorization and normalized-gradient identity pass exact symbolic checks. Current assessment: mathematically correct but probably not novel in substance, because it is a differential restatement of the public resultant normalization.
 
+## Public-source acquisition state
+
+The source-level public corpus required for the next comparison is now acquired and hash-pinned:
+
+- Kistner–Shaska arXiv `2608.02863` original source bundle, SHA-256 `3f31ed51b3589cc41ba51aa140632fcaff74da92fa85442492d96069583994ce`;
+- Shaska arXiv `2607.20210` original source bundle, SHA-256 `abf541b7e211d5ef0b14145ddb303f0cc34cb959fa7bec17f9efac1f6e3eadc9`;
+- Zenodo record `10.5281/zenodo.21514514` metadata plus its sole attached file.
+
+The Kistner–Shaska source bundle contains only five TeX/metadata files and does **not** contain the cited `balanced_minimal_models_companion.pdf`. The arXiv format page exposes no ancillary-download entry, the canonical ancillary candidate returned HTTP 404, and no retained local copy was found by the acquisition courier. Current status: **NOT PUBLICLY LOCATED**.
+
+This is now a fixed literature-coverage caveat, not an uncompleted courier task.
+
 ## Public-overlap assessment
 
 Already substantially public:
@@ -144,15 +156,16 @@ Not yet matched by an indexed public statement found in the current audit:
 - its exact source-degree/hidden-degree filtration;
 - the cross-BLIND explanation of the two-jet criterion via the intersection ring.
 
-Degree-17 minimality remains subject to a major priority caveat: the Kistner–Shaska ancillary companion preprint must be inspected before any novelty claim.
+Chart-relative degree-17 minimality remains subject to a priority caveat because the cited Kistner–Shaska companion is presently unavailable for inspection. Absence of that artifact is not evidence that it lacks an overlapping theorem.
 
-## Blocking obligations
+## Remaining blocking obligations
 
-1. Acquire and inspect `balanced_minimal_models_companion.pdf` and the full ancillary source bundle for arXiv:2608.02863.
+1. Complete the theorem-by-theorem comparison against the acquired `2607.20210` and `2608.02863` source texts and the public verification trail.
 2. Run an independent non-SymPy CAS audit (Sage/Singular/Macaulay2 preferred).
 3. Obtain external algebraic-geometry review of the normality/divisorial-valuation proof.
-4. Recover raw BLIND 4 provenance if available locally; current durable archive is largely retrospective for BLIND 4.
-5. Only after 1–4 decide whether a publication-quality note is justified.
+4. Only after 1–3 decide whether a publication-quality note is justified and what novelty language, if any, is supportable.
+
+Additional raw BLIND provenance is **not** an open obligation. The owner has confirmed that the surviving archive is the complete available corpus.
 
 ## Do not overclaim
 
