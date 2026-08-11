@@ -2,6 +2,16 @@
 
 Authority: owner publication criteria clarified 2026-08-11; archive review completed the same day.
 
+The publication-safe derivatives listed below have now also been staged durably in the ChatGPT Library under:
+
+`/YOLO Math Runs/Jacobian Conjecture YOLO Run/Public Release Candidates/2026-07-23/`
+
+The canonical approved historical archive is retained under:
+
+`/YOLO Math Runs/Jacobian Conjecture YOLO Run/Historical Public Release/2026-07-23/`
+
+They remain **not yet published to GitHub** until a raw-git/Codex or other exact-byte push is completed and read back. Staging in the Library does not change publication status.
+
 These files are approved for a raw-git/Codex push into `Jacobian-Conjecture/historical/2026-07-23/`.
 
 | Destination filename | SHA-256 | Size | Source |
