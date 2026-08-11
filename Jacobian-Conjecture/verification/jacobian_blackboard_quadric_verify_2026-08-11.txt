@@ -1,0 +1,17 @@
+SL2 determinant/exchange identity: VERIFIED
+SL2 matrix factorization: VERIFIED
+Torus-normalized hidden big cell [[1,a],[W,1+aW]]: VERIFIED
+Discriminant-one quadratic q^2-4cW=1: VERIFIED
+sl2 derivation relations: VERIFIED
+Leading degree triple (W,b,c)=(4,5,6) and cone relation: VERIFIED
+Canonical minimal directions m=1..12: VERIFIED
+m=3: predicted sharp deformation degree 11
+m=4: predicted sharp deformation degree 16
+m=5: predicted sharp deformation degree 17
+m=6: predicted sharp deformation degree 22
+m=7: predicted sharp deformation degree 23
+m=8: predicted sharp deformation degree 28
+m=9: predicted sharp deformation degree 29
+m=10: predicted sharp deformation degree 34
+m=11: predicted sharp deformation degree 35
+m=12: predicted sharp deformation degree 40
