@@ -1,47 +1,70 @@
-# Incoming acquisition contract
+# Incoming acquisition ledger
 
-This directory documents artifacts needed to close the current correctness/novelty audit. Do not commit credentials, cookies, browser profiles, or unrelated private exports.
+This directory records artifacts needed to close the current correctness/novelty audit. Do not commit credentials, cookies, browser profiles, unrelated private exports, or third-party source bundles merely because they were acquired for review.
 
 ## Provenance corpus is closed
 
-The owner has confirmed that the Jacobian archives already supplied contain **all BLIND-session conversational history that still exists or is available to provide**. Do not ask Codex/Luna or any acquisition agent to search for additional raw BLIND 1/3/4/5 conversations or the sibling message that suggested `k[a,W] ∩ k[x,y,z]`. Treat the existing raw BLIND 2 conversation, raw verification conversation, BLIND 1–5 findings packages, retrospective histories, scripts, and audit artifacts as the complete available provenance corpus.
+The owner has confirmed that the Jacobian archives already supplied contain **all BLIND-session conversational history that still exists or is available to provide**. Do not ask Codex/Luna or any acquisition agent to search for additional raw BLIND 1/3/4/5 conversations or the sibling message that suggested `k[a,W] ∩ k[x,y,z]`.
 
-This is an evidence limitation to record, not an acquisition task.
+Treat the existing raw BLIND 2 conversation, raw verification conversation, BLIND 1–5 findings packages, retrospective histories, scripts, and audit artifacts as the complete available provenance corpus. Missing raw provenance is a fixed evidence limitation, not an acquisition task.
 
-## P0 — Kistner–Shaska ancillary package
+## P0 — Kistner–Shaska arXiv:2608.02863 — COMPLETE
 
-Acquire the original arXiv source/ancillary bundle for:
+Acquired 2026-08-11 by a Codex Luna courier from the original arXiv source endpoint, preserving downloaded bytes.
 
-- arXiv: `2608.02863`
-- `https://arxiv.org/e-print/2608.02863`
-- alternate: `https://arxiv.org/src/2608.02863`
+- source bundle SHA-256: `3f31ed51b3589cc41ba51aa140632fcaff74da92fa85442492d96069583994ce`
+- bundle contents: `00README.json`, `main.tex`, `sh-132-macro.tex`, `sh-132-ref.tex`, `sh-132.tex`
 
-Preserve the original bundle bytes and SHA-256 outside the public repo if redistribution status is unclear.
-
-Highest-priority file named by the paper:
+The paper cites a companion preprint named:
 
 `balanced_minimal_models_companion.pdf`
 
-Approximate title:
+approximately titled *Differential obstructions and minimal models for balanced graded Keller maps*.
 
-*Differential obstructions and minimal models for balanced graded Keller maps*.
+Bounded acquisition result:
 
-Also inventory every ancillary script/certificate/log in the submission.
+- not present in the downloaded arXiv source bundle;
+- arXiv format page exposed no ancillary-download entry;
+- canonical ancillary candidate URL returned HTTP 404;
+- no retained local copy was found on the courier machine.
 
-### Required comparison questions
+**Status: NOT PUBLICLY LOCATED.**
 
-1. Does the companion state or imply an intersection theorem equivalent to
-   `k[a,W] ∩ k[x,y,z] = k[W,b,c]/(cW-b(b-1))`?
-2. Does it contain a filtration equivalent to
-   `delta(m)=3m` for even `m` and `3m+2` for odd `m`?
-3. Does it prove a minimal-degree result that subsumes the chart-relative degree-17 canonical-potential theorem?
-4. Does it contain the same unique hidden-degree-5 direction `a^2(1+aW)^3`, perhaps in different graded coordinates?
-5. Does it state a jet condition equivalent to `H(t)=1+t+(1+t)^3R(t)`?
+Do not manufacture a substitute from TeX or treat this as an invitation to search private owner data. The unavailable companion remains a literature-coverage caveat for priority assessment unless an authentic copy later surfaces.
 
-Record exact theorem/lemma/page references rather than only semantic similarity.
+## P1-A — Zenodo record 10.5281/zenodo.21514514 — COMPLETE
 
-## P1 — independent CAS audit
+Exact API metadata and every record attachment were acquired.
 
-Deferred until the repository acquisition/provenance layer is settled.
+The record contains exactly one attached file:
 
-Preferred independent tools: SageMath/Singular, standalone Singular, or Macaulay2. This audit should be orthogonal to the existing SymPy checks and should distinguish finite computational evidence from proofs of infinite intersection statements.
+- `Screenshot 2026-07-16 at 4.18.13 PM.png`
+- size: 33,833 bytes
+- Zenodo checksum: `md5:5507ed840f46bff0672db5cb45a117e0`
+- local SHA-256: `2e8f70ba575f05d9f6d525751c354538758c9e2834080380566b644e71e7faa2`
+
+Exact `ZENODO_METADATA.json` local SHA-256:
+
+`99887565b0261c816f4e80d1d21fe1516b1aecd917aa9f9aaf2cd49bd552afbf`
+
+The record description contains the Lean formalization and points separately to `https://www.github.com/TOTOGT/jacobian/`; there is no hidden Lean source archive attached to the Zenodo record.
+
+## P1-B — Shaska arXiv:2607.20210 — COMPLETE
+
+Acquired untouched original arXiv source bundle.
+
+- source bundle SHA-256: `abf541b7e211d5ef0b14145ddb303f0cc34cb959fa7bec17f9efac1f6e3eadc9`
+- bundle contents: `00README.json`, `sh-131-latest.tex`, `sh-131-macro.tex`
+- no separately listed ancillary PDF, script, notebook, or certificate
+
+## Current acquisition state
+
+No additional public-source acquisition is required before the theorem-by-theorem comparison begins.
+
+The next substantive obligations are analytical/verification tasks rather than courier tasks:
+
+1. compare the acquired public source texts against the BLIND boundary-ring, filtration, degree-17, and jet results;
+2. run an independent non-SymPy CAS audit (Sage/Singular/Macaulay2 preferred);
+3. obtain external algebraic-geometry review of the normality/divisorial-valuation proof.
+
+Do not create new acquisition chores merely to make the ledger look busy. Humans have already invented enough paperwork.
