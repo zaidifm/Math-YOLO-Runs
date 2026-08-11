@@ -1,0 +1,13 @@
+b-xK: 0
+c-vK: 0
+cW-b(b-1): 0
+D preserves relation: 0
+Dg raw difference factor: -c*(-W*c + b**2 - b)*(3*b**2*r2 + 2*b*r1 - 4*b*r2 + r0 - r1 + r2)
+Dg reduced difference: 0
+hidden d/da formula: 0
+hidden a*d/da-g formula: 0
+jet solve cubic: [{h0: h3 + 1, h1: 3*h3 + 1, h2: 3*h3}]
+H-(1+t) factor: h3*(t + 1)**3
+W degree 4 top terms [((3, 0, 1), 1)]
+b degree 5 top terms [((3, 1, 1), 2)]
+c degree 6 top terms [((3, 2, 1), 4)]
