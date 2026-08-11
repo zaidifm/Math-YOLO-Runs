@@ -1,0 +1,13 @@
+symbolic Jacobian determinant det=1 for all lambda: VERIFIED
+generic lambda!=0 degree profile (S,U,W)=(17,16,4): VERIFIED
+boundary W=0 coverage: U=y, S=z+(16-3lambda)y^2/2: VERIFIED
+W!=0 quintic recovery polynomial: VERIFIED
+squareful elimination resultant: 320*k*(5*k^2+99*k+27): VERIFIED
+nonzero exceptional equation: 27*lambda^2+99*lambda+5=0
+exceptional lambdas: [-11/6 - 7*sqrt(21)/18, -11/6 + 7*sqrt(21)/18]
+constructive omitted targets at both exceptional lambdas: VERIFIED
+  with k=1/lambda: r=-(2k+3)/21, s=(k-9)/7, W=1, U=(3-4k)/15, S=-(28k+9)/250
+lambda=0 omitted curve U=-1/(3w), S=1/(54w^2): VERIFIED
+SURJECTIVITY CLASSIFICATION:
+  lambda != 0 and 27lambda^2+99lambda+5 != 0 -> surjective
+  lambda in {0, (-33-7sqrt(21))/18, (-33+7sqrt(21))/18} -> nonsurjective
