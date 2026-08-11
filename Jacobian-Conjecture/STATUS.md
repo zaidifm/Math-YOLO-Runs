@@ -2,9 +2,9 @@
 
 **Checkpoint:** 2026-08-11
 
-## Current mathematical frontier
+## Current frontier
 
-The 2026-08-11 blackboard pass reorganized the previously separate boundary-ring, LND, jet, and degree-17 observations around a single exact structure: an `SL_2` matrix in the original source variables.
+The 2026-08-11 blackboard pass reorganized the earlier boundary-ring, LND, jet, and degree-17 observations around one exact source object.
 
 Set
 
@@ -14,7 +14,7 @@ L=-1+3xy+x^2z,\qquad
 K=y+6xy^2+xz+2x^2yz.
 \]
 
-Then exact symbolic algebra gives
+Then
 
 \[
 \boxed{xK-vL=1},
@@ -23,101 +23,65 @@ Then exact symbolic algebra gives
 so
 
 \[
-G=\begin{pmatrix}x&v\\L&K\end{pmatrix}\in SL_2.
+\boxed{G=\begin{pmatrix}x&v\\L&K\end{pmatrix}\in SL_2.}
 \]
 
-The matrix has the exact factorization
+The determinant identity and the exact elementary factorization of `G` are **COMPUTED**.
+
+### Boundary ring = torus quotient
+
+Under row rescaling by the diagonal torus, the invariant matrix products are
 
 \[
-G=
-\begin{pmatrix}1&0\\3y+xz&1\end{pmatrix}
-\begin{pmatrix}x&1\\-1&0\end{pmatrix}
-\begin{pmatrix}1&2y\\0&1\end{pmatrix}.
+W=xL,\qquad b=xK,\qquad b-1=vL,\qquad c=vK.
 \]
 
-These statements are **COMPUTED** exactly.
-
-### Boundary ring as a torus quotient
-
-Let the diagonal torus act by row rescaling
+Hence
 
 \[
-t\cdot(x,v,L,K)=(tx,tv,t^{-1}L,t^{-1}K).
+\boxed{R\cong k[W,b,c]/(cW-b(b-1))}
 \]
 
-The invariant matrix products are
+is the affine torus quotient of the displayed `SL_2` model. On `x!=0`, torus normalization gives
 
 \[
-W=xL,\qquad b=xK,\qquad b-1=vL,\qquad c=vK,
-\]
-
-and therefore
-
-\[
-\boxed{R\cong k[W,b,c]/(cW-b(b-1)).}
-\]
-
-Geometrically this is the affine torus quotient of `SL_2` (left quotient in the displayed convention; equivalent to `SL_2/T` after inversion).
-
-On `x\ne0`, torus-normalizing the first matrix entry gives
-
-\[
-\operatorname{diag}(1/x,x)G=
 \begin{pmatrix}1&a\\W&b\end{pmatrix},
 \qquad a=v/x,
 \]
 
-and determinant one forces
+so determinant one forces the old shifted relation
 
 \[
 \boxed{b=1+aW}.
 \]
 
-Thus the old shifted variable is the determinant-one exchange relation on the big quotient cell, rather than an unexplained pole-cancellation trick.
+The hidden `(a,W)` plane is the quotient big cell. The shift is structural, not accidental.
 
-### Discriminant-one quadric and `sl_2`
+### Discriminant-one quadric and full `sl_2`
 
-Put
-
-\[
-q=2b-1.
-\]
-
-Then
+With `q=2b-1`,
 
 \[
 \boxed{q^2-4cW=1}.
 \]
 
-Equivalently,
+The earlier hidden derivative is one root operator in the exact `sl_2` triple
 
 \[
-(xU+vV)(LU+KV)=WU^2+qUV+cV^2,
-\]
-
-whose discriminant is `(xK-vL)^2=1`.
-
-The old hidden derivative is one root operator in a full `sl_2` action:
-
-\[
-e(W)=0,\quad e(q)=2W,\quad e(c)=q,
+e(W)=0,\ e(q)=2W,\ e(c)=q,
 \]
 
 \[
-f(W)=q,\quad f(q)=2c,\quad f(c)=0,
+f(W)=q,\ f(q)=2c,\ f(c)=0,
 \]
 
-and with `h=[e,f]`,
-
-\[
-h(W)=2W,\quad h(q)=0,\quad h(c)=-2c.
-\]
-
-Exact symbolic checks verify
+with `h=[e,f]` and
 
 \[
 [e,f]=h,\qquad [h,e]=2e,\qquad [h,f]=-2f.
 \]
+
+These identities and commutators are **COMPUTED** exactly.
 
 ### Strengthened intersection theorem
 
@@ -127,122 +91,97 @@ The archived BLIND 2 theorem is
 \boxed{k[a,W]\cap k[x,y,z]=R.}
 \]
 
-The new `SL_2` identity tightens its proof. If `D` is the missing boundary line with ideal
+The new determinant identity gives the exact ideal pullback
 
 \[
-I_D=(W,b),
+(W,b)k[x,y,z]=(xL,xK)=x(L,K)=(x),
 \]
 
-then in `k[x,y,z]`
+because `xK-vL=1` implies `(L,K)=(1)`.
 
-\[
-(W,b)=(xL,xK)=x(L,K).
-\]
+Thus the missing boundary divisor pulls back scheme-theoretically to `x=0` with multiplicity one. Combined with the quotient big cell and normality of the smooth quadric, this gives a direct divisorial proof of the intersection equality.
 
-Since `xK-vL=1`, `(L,K)=(1)`, hence scheme-theoretically
+**Status:** supporting identities **COMPUTED**; general divisorial proof **DERIVED**, internally stress-tested, not yet independently specialist/formally reviewed.
 
-\[
-\boxed{(W,b)k[x,y,z]=(x).}
-\]
+### Associated graded = second Veronese / `A_1` cone
 
-So the boundary divisor pulls back exactly to `x=0` with multiplicity one. Together with the big-cell description and normality of the smooth quadric, this gives a direct divisorial proof of the intersection equality.
-
-**Status:** the supporting identities are **COMPUTED**; the general algebraic-geometric argument is **DERIVED** and has survived internal adversarial checking, but is not yet independently specialist/formally reviewed.
-
-### Associated graded and the parity law
-
-The actual total degrees are
+The source total degrees are
 
 \[
 \deg W=4,\qquad \deg b=5,\qquad \deg c=6,
 \]
 
-with top homogeneous forms
+with top forms
 
 \[
-\operatorname{in}(W)=x^3z,\quad
-\operatorname{in}(b)=2x^3yz,\quad
-\operatorname{in}(c)=4x^3y^2z.
+x^3z,\qquad 2x^3yz,\qquad 4x^3y^2z.
 \]
 
 Therefore
 
 \[
 \boxed{\operatorname{gr}R\cong
-k[\bar W,\bar b,\bar c]/(\bar c\bar W-\bar b^2).}
+k[\bar W,\bar b,\bar c]/(\bar c\bar W-\bar b^2)
+\cong k[s^2,st,t^2].}
 \]
 
-Equivalently,
-
-\[
-\operatorname{gr}R\cong k[s^2,st,t^2]=k[s,t]^{\{\pm1\}},
-\]
-
-with source weights `deg(s)=2`, `deg(t)=3`. Hidden `a`-degree is the exponent of `t`.
-
-The earlier source-degree law
+Use `deg(s)=2`, `deg(t)=3`; hidden `a`-degree is the exponent of `t`. The old ring-filtration law
 
 \[
 \boxed{\delta_R(m)=
-\begin{cases}
-3m,&m\text{ even},\\
-3m+2,&m\text{ odd}
+\begin{cases}3m,&m\text{ even},\\3m+2,&m\text{ odd}
 \end{cases}}
 \]
 
-is consequently the parity constraint of the second Veronese: `s^r t^m` is invariant only when `r+m` is even. The mysterious `+2` for odd `m` is the cost of the smallest permitted `s` exponent.
-
-A weighted Rees presentation is
+is exactly the parity condition of the second Veronese. A compatible weighted Rees form is
 
 \[
 Q^2-4CW=T^{10},
 \]
 
-so the total-degree filtration degenerates the smooth discriminant-one quadric to the `A_1` quadric cone.
+which degenerates the smooth discriminant-one quadric to the `A_1` cone.
 
-### Full fixed-chart canonical-potential classification
+### Complete fixed-chart canonical-potential classification
 
-For the canonical construction with base potential
+For the base potential
 
 \[
 h_0=a^2+Wa^3=a^2(1+aW),
 \]
 
-write `h=h0+g`. Polynomial outputs require both
+write `h=h0+g`. Polynomial outputs require
 
 \[
 g_a\in R,\qquad ag_a-g\in R.
 \]
 
-A diagonal decomposition in monomials `a^iW^j` and the boundary valuation give the complete fixed-chart classification
+A complete diagonal analysis in `a^iW^j`, using the boundary valuation, gives
 
 \[
-\boxed{
-h=h_0+\alpha a+\beta+r,
-\qquad r\in I_D=(W,b)\subset R.
-}
+\boxed{h=h_0+\alpha a+\beta+r,
+\qquad r\in I_D=(W,b)\subset R.}
 \]
 
-The `\alpha a` and `\beta` terms only translate target coordinates. Thus, modulo translations, the entire polynomializable canonical-potential deformation space is exactly the ideal of the missing boundary line.
+The `\alpha a` and `\beta` terms are target translations. Modulo translations, the polynomializable deformation space is exactly the ideal of the missing boundary line.
 
-This is **DERIVED**, not yet externally reviewed. It strictly generalizes the BLIND 4 slice. Intersecting with `h=a^2H(aW)` recovers
+This **DERIVED** statement strictly generalizes the BLIND 4 slice. The old two-jet condition
 
 \[
 H(t)=1+t+(1+t)^3R(t)
 \]
 
-as the `d=2` boundary-divisibility condition.
+is the `d=2` boundary-divisibility case.
 
-### Sharp deformation spectrum
+### Sharp degree spectra and degree 17
 
-In the associated graded model the boundary ideal becomes `(s^2,st)`. The classification predicts the sharp output-degree threshold at hidden degree `m>=1`:
+For hidden degree `m`, the boundary ideal becomes `(s^2,st)` in the associated graded model. Minimizing the degree of the **pulled-back potential representative** gives
 
 \[
-\boxed{\mu(m)=
+\boxed{\mu_{\mathrm{pot}}(m)=
 \begin{cases}
 3m+2,&m\text{ odd},\\
-3m+4,&m\text{ even}.
-\end{cases}}
+3m+4,&m\text{ even},
+\end{cases}\qquad m\ge1.}
 \]
 
 Unique minimal representatives are
@@ -258,74 +197,82 @@ g_{2r}=b^2c^{r-1}=a^{r-1}(1+aW)^{r+1}.
 In particular,
 
 \[
-\boxed{g_5=bc^2=a^2(1+aW)^3,\qquad \mu(5)=17.}
+\boxed{g_5=bc^2=a^2(1+aW)^3,\qquad \mu_{\mathrm{pot}}(5)=17.}
 \]
 
-The old `(1,3,3,1)` vector is therefore the binomial expansion of the unique minimal boundary-ideal weight vector. Degree 17 is no longer an isolated linear-algebra surprise.
+The coefficient pattern `(1,3,3,1)` is the binomial expansion of the unique minimal boundary-ideal weight vector.
 
-A further correction/refinement is
+The potential degree and induced output-change degree agree for every `m>=2`. There is one low-degree cancellation exception:
 
 \[
-\delta_R(4)=12\quad\text{but}\quad \mu(4)=16,
+g_1=b,\qquad \deg(g_1\text{ after pullback})=5,
 \]
 
-because the ring-minimal element `c^2` does not satisfy the canonical-potential boundary condition; the minimal admissible deformation is `b^2c`.
-
-### Exact bounded-kernel validation
-
-Modulo two translation gauges, the predicted canonical kernel has basis families
-
-- `W^j`, `j>=1`, output degree `4j`;
-- `bW^j`, `j>=0`, output degree `4j+4`;
-- `b^sW^j`, `s>=2,j>=0`, output degree `5s+4j`;
-- `b^sc^r`, `s>=1,r>=1`, output degree `5s+6r`.
-
-Its Hilbert series is
+but
 
 \[
-\boxed{
-H(q)=2+\frac{2q^4}{1-q^4}
+g_{1,a}=W,\qquad ag_{1,a}-g_1=-1,
+\]
+
+so its output change has degree 4. Thus if `\nu(m)` is the sharp output-change degree,
+
+\[
+\boxed{\nu(1)=4,\qquad \nu(m)=\mu_{\mathrm{pot}}(m)\quad(m\ge2).}
+\]
+
+This correction does not affect the degree-17 theorem or any threshold used for hidden degree at least two.
+
+A second refinement is
+
+\[
+\delta_R(4)=12\quad\text{but}\quad \mu_{\mathrm{pot}}(4)=16,
+\]
+
+because `c^2` is ring-minimal but not an admissible canonical-potential deformation; the minimal admissible direction is `b^2c`.
+
+### Closed bounded kernel
+
+Modulo the two translation gauges, the predicted output-degree basis is
+
+- `W^j`, `j>=1`: degree `4j`;
+- `bW^j`, `j>=0`: degree `4j+4`;
+- `b^sW^j`, `s>=2,j>=0`: degree `5s+4j`;
+- `b^sc^r`, `s>=1,r>=1`: degree `5s+6r`.
+
+Hence
+
+\[
+\boxed{H(q)=2+\frac{2q^4}{1-q^4}
 +\frac{q^{10}}{(1-q^4)(1-q^5)}
-+\frac{q^{11}}{(1-q^5)(1-q^6)}.
-}
++\frac{q^{11}}{(1-q^5)(1-q^6)}.}
 \]
 
-An exact SymPy reconstruction of the original coefficient-constraint matrices was run independently for every bound `D=3,...,20`. The predicted cumulative dimension matched exact nullity at all 18 bounds. At `D=16` the nullity is 15; at `D=17` it is 16, with exactly one new direction, `bc^2`.
+An exact SymPy reconstruction of the original coefficient-constraint matrices matched the predicted cumulative nullity for **all 18 bounds `D=3,...,20`**. At `D=16` the nullity is 15; at `D=17` it is 16, with exactly one new direction, `bc^2`.
 
-## Verification artifacts
+## Durable artifacts
 
 - `docs/SL2_BOUNDARY_CLASSIFICATION_2026-08-11.md`
 - `scripts/jacobian_blackboard_quadric_verify.py`
 - `verification/jacobian_blackboard_quadric_verify_2026-08-11.txt`
 - `verification/Jacobian_Canonical_Kernel_Exact_Validation_2026-08-11.txt`
 
-The exact script checks the determinant/exchange identity, matrix factorization, quotient big cell, discriminant-one relation, `sl_2` commutators, leading forms, and minimal directions through hidden degree 12.
+The verifier checks the determinant/exchange identity, matrix factorization, quotient big cell, discriminant-one equation, `sl_2` commutators, leading forms, and minimal representatives through hidden degree 12.
 
-## Public-source acquisition state
+## Public-source state
 
-The source-level public corpus is acquired and hash-pinned:
+The source-level public corpus is acquired and hash-pinned. The cited Kistner–Shaska `balanced_minimal_models_companion.pdf` is absent from the deposited arXiv bundle and was **NOT PUBLICLY LOCATED** by bounded acquisition checks. This is a literature-coverage caveat, not evidence of non-overlap.
 
-- Kistner–Shaska arXiv `2608.02863`, SHA-256 `3f31ed51b3589cc41ba51aa140632fcaff74da92fa85442492d96069583994ce`;
-- Shaska arXiv `2607.20210`, SHA-256 `abf541b7e211d5ef0b14145ddb303f0cc34cb959fa7bec17f9efac1f6e3eadc9`;
-- Zenodo record `10.5281/zenodo.21514514` metadata plus its sole attached file.
+## Epistemic / priority state
 
-The Kistner–Shaska source does not contain the cited `balanced_minimal_models_companion.pdf`; bounded acquisition checks could not publicly locate it. This remains a fixed literature-coverage caveat, not an unfinished courier task.
+No novelty or priority claim is made for the `SL_2/T`, quadric, classification, spectrum, or Hilbert-series synthesis.
 
-## Priority / novelty status
-
-No priority claim is made for the new `SL_2/T`, quadric, classification, spectrum, or Hilbert-series synthesis.
-
-The unavailable Kistner–Shaska companion prevents completely closing overlap questions around differential obstructions/minimal models. Absence of that file is not evidence of absence of overlap.
+Exact symbolic identities and finite matrix comparisons are **COMPUTED**. The general intersection/classification/spectrum arguments are **DERIVED** and require an independent second route plus specialist/formal review.
 
 ## Remaining blocking obligations
 
-1. Independently rederive or formally check the general intersection/classification argument, preferably with a non-SymPy CAS/formal route where applicable.
-2. Obtain external algebraic-geometry review of the quotient/divisor argument and the canonical-potential classification.
-3. Compare the acquired public source texts theorem-by-theorem against this strengthened formulation; carry the unavailable companion as an explicit limitation.
-4. Only then decide whether a publication-quality note is justified and what novelty language, if any, is supportable.
+1. Independently rederive or formally check the general intersection/classification argument, preferably by a route orthogonal to SymPy.
+2. Obtain external algebraic-geometry review of the quotient/divisor argument.
+3. Compare the acquired public source texts theorem-by-theorem against this strengthened formulation, carrying the unavailable companion as an explicit limitation.
+4. Only then decide whether a publication-quality note and any novelty language are supportable.
 
-Additional raw BLIND provenance is **not** an open obligation. The owner has confirmed the surviving archive is complete.
-
-## Do not overclaim
-
-The new structure is much stronger than the previous collection of coincidences, but the repository status discipline still applies: exact symbolic identities are not the same thing as independent theorem verification, and mathematical correctness is not the same thing as priority.
+Additional raw BLIND provenance is **not** an open obligation.
