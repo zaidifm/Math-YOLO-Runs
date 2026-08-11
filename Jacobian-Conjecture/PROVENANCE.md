@@ -12,6 +12,8 @@ The private source archive reviewed for this project contains:
 
 Most supplementary BLIND histories are **not** raw platform transcripts. They preserve chronology and mathematical findings but do not preserve a perfect record of every timestamp, branch, hidden reasoning trace, or prompt insertion point.
 
+The owner has confirmed that this is the **complete available BLIND conversational/provenance corpus**. Additional raw BLIND 1/3/4/5 conversations or sibling-source transcripts are not available and should not be requested from future Codex/Luna acquisition agents. Missing raw provenance is therefore a fixed evidence limitation, not an open retrieval task.
+
 Raw private conversation exports are intentionally not committed to this public repository.
 
 ## BLIND-session provenance
@@ -64,7 +66,7 @@ Initially failed twice, became skeptical, and overgeneralized narrow no-go resul
 
 Current reconstruction shows the two-jet theorem is a one-variable slice of BLIND 2's boundary ring, while the normalized-gradient identity is probably a differential reformulation of the public resultant normalization.
 
-Raw BLIND 4 platform provenance has not yet been recovered in the current archive.
+A raw BLIND 4 platform transcript is not available; the supplied findings package and retrospective history are the authoritative surviving evidence for that run.
 
 ### BLIND 5
 
@@ -82,7 +84,7 @@ The current ChatGPT audit added or made explicit several connections that were n
 5. interpretation of hidden `a`-degree as the induced LND filtration;
 6. associated-graded leading relation `cW=b^2` and the `+1` shift as the smoothing/splitting of the double-root boundary cone.
 
-These 2026-08-11 observations must not be back-attributed to the original BLIND sessions unless a raw record later demonstrates otherwise.
+These 2026-08-11 observations must not be back-attributed to the original BLIND sessions absent evidence already contained in the surviving corpus.
 
 ## Priority caveats
 
@@ -90,5 +92,6 @@ Novelty and priority are separate from correctness. Before any public priority c
 
 - inspect the Kistner–Shaska ancillary companion preprint `balanced_minimal_models_companion.pdf`;
 - compare recent non-indexed notes and ancillary materials;
-- recover raw BLIND 4/other histories if possible;
 - obtain independent specialist review.
+
+Do not condition priority assessment on recovering additional raw BLIND histories; the owner has confirmed no further such material is available.
