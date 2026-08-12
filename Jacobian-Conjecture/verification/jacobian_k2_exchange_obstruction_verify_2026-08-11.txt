@@ -1,0 +1,6 @@
+k=2 source Jacobian = -Delta*x: VERIFIED
+b=1+a^2 W divisible by x and c=a b polynomial: VERIFIED
+boundary coordinate c0 = s-2r: VERIFIED
+incidence residue formula through all residue-relevant d=2 corrections: VERIFIED
+residue wedge c0 = -2 Delta, independent of gamma: VERIFIED
+therefore nonzero source Jacobian (Delta != 0) is incompatible with residue being a boundary function: VERIFIED
