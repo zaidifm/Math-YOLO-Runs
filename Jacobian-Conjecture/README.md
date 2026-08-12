@@ -80,6 +80,7 @@ None of this is a global minimality/classification theorem for all Keller maps.
 - [`docs/MINIMAL_DIRECTION_SURJECTIVITY_2026-08-11.md`](docs/MINIMAL_DIRECTION_SURJECTIVITY_2026-08-11.md) — surjectivity theorem for all `m>=6`.
 - [`docs/MINIMAL_DIRECTION_SURJECTIVITY_SECOND_PROOF_2026-08-11.md`](docs/MINIMAL_DIRECTION_SURJECTIVITY_SECOND_PROOF_2026-08-11.md) — Newton/Vandermonde second proof and comparison with the BLIND 1 family.
 - [`docs/MINIMAL_SCALAR_SURJECTIVITY_PHASE_2026-08-11.md`](docs/MINIMAL_SCALAR_SURJECTIVITY_PHASE_2026-08-11.md) — complete `m=3,4,5,>=6` phase diagram.
+- [`docs/BEHIND_THE_VEIL_RESEARCH_MEMORANDUM_2026-08-11.md`](docs/BEHIND_THE_VEIL_RESEARCH_MEMORANDUM_2026-08-11.md) — forward-looking research memorandum on the `SL_2/T` mechanism, JC2, boundary geometry, higher-rank generalizations, and transferable representation heuristics for other hard problems.
 - [`verification/`](verification/) and [`scripts/`](scripts/) — exact certificates and executable checks.
 - [`sources/PUBLIC_SOURCES.md`](sources/PUBLIC_SOURCES.md) — public literature map and current overlap caveats.
 
